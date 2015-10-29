@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>NPC Name Generator</title>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="humanNames.js"></script>
+	<script type="text/javascript" src="dwarfNames.js"></script>
+	<script type="text/javascript" src="elfNames.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- le styles -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<!-- JQuery -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+  			$("#name").fadeToggle( "slow" );
+		});
+	});
+
+	</script>
+</head>
+<body>
+	<div class = "container">
+		<div class = "jumbotron">
+			<h1>DnD Character Name Generator</h1>
+		</div>
+		<div class = "row"></div>
+			<div class="col-sm-4">
+				<button class = "nameButton" onclick= "humanNameGen()">Click here to generate an Human name!</button>
+					</div>
+			<div class="col-sm-4">
+				<button class = "nameButton" onclick= "elfNameGen()">Click here to generate an Elf name!</button>
+					</div>
+			<div class="col-sm-4">
+				<button class = "nameButton" onclick= "dwarfNameGen()">Click here to generate a Dwarf name!</button>
+					</div>
+			</div>
+		</div>
+	<div class = "container">
+		<h1 id="name"></h1>
+	</div>
+</body>
+</html>
