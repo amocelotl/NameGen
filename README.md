@@ -26,7 +26,5 @@ FURTHER WORK
 
 Integrate properly into JQuery to support names fading in and out on button press.
 
-
-HUMANS - add middle names
 ELVES - tidy up formatting
 DWARVES - add cognimens ("The Brash") on rare occaisons

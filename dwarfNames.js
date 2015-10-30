@@ -122,3 +122,12 @@ var dwarfLNames2 = [
 	"water",
 	"river",
 	];
+
+var dwarfCog = [
+	"The Pick of Grief",
+	"Ironsides",
+	"Metalfist",
+	"Lord of Misrule",
+	"Waraxe",
+	"The Brash",
+	];
