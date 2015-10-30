@@ -30,7 +30,7 @@
 
 	function dwarfNameGen() {
 		nameObj.fName = arrSearch(dwarfFNames);
-		nameObj.lName = arrSearch(dwarfLNames);
+		nameObj.lName = arrSearch(dwarfLNames1) + arrSearch(dwarfLNames2);
 		nameDisplay();
 		}
 
@@ -46,6 +46,7 @@
 		nameDisplay();
 		}
 
+		// this to change with JQuery
 	function nameDisplay() {
 		document.getElementById("name").innerHTML = nameObj.fName + " " + nameObj.lName;
 		console.log(nameObj.fName + " " + nameObj.lName);
