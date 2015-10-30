@@ -11,7 +11,11 @@ function nameDisplay() {
 	console.log(nameObj.fName + " " + nameObj.lName);
 	$(document).ready(function(){
 		var name = (nameObj.fName + " " + nameObj.lName);
-  		$("#name").text(name);
+  		$("#name").text(name).fadeIn("slow");
+  		$("button").mouseenter(function() {
+  			$('#name').fadeOut("slow");
+  		});
+
 	});
 }
 
@@ -40,3 +44,4 @@ $(document).ready(function(){
 		nameDisplay();
 	});
 });
+
