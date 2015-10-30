@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>NPC Name Generator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="humanNames.js"></script>
 	<script type="text/javascript" src="dwarfNames.js"></script>
@@ -19,13 +20,13 @@
 		</div>
 		<div class = "row"></div>
 			<div class="col-sm-4">
-				<button class = "nameButton" onclick= "humanNameGen()">Click here to generate an Human name!</button>
+				<button id = "humanButton">Click here to generate an Human name!</button>
 					</div>
 			<div class="col-sm-4">
-				<button class = "nameButton" onclick= "elfNameGen()">Click here to generate an Elf name!</button>
+				<button id = "elfButton">Click here to generate an Elf name!</button>
 					</div>
 			<div class="col-sm-4">
-				<button class = "nameButton" onclick= "dwarfNameGen()">Click here to generate a Dwarf name!</button>
+				<button id = "dwarfButton">Click here to generate a Dwarf name!</button>
 					</div>
 		</div>
 	</div>

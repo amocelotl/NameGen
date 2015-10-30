@@ -1,54 +1,42 @@
-	var nameObj = {
-		fName: "",
-		lName: "",
-	};
-/*
-	var race = prompt("Pick a race");
-	switch (race) {
-		case "Dwarf":
-		dwarfNameGen();
-		break;
+var nameObj = {
+	fName: "",
+	lName: "",
+};
 
-		case "Elf":
-		elfNameGen();
-		break;
-
-		case "Human":
-		humanNameGen();
-		break;
-
-		default:
-		alert("That's not valid!");
-		break;
-		}
-*/
-
-	function arrSearch(arrName) {
-		return arrName[Math.floor(Math.random() * arrName.length)];
+function arrSearch(arrName) {
+	return arrName[Math.floor(Math.random() * arrName.length)];
 	}	
 
+function nameDisplay() {
+	console.log(nameObj.fName + " " + nameObj.lName);
+	$(document).ready(function(){
+		var name = (nameObj.fName + " " + nameObj.lName);
+  		$("#name").text(name);
+	});
+}
 
-	function dwarfNameGen() {
+$(document).ready(function(){
+	$('#dwarfButton').click(function(){
 		nameObj.fName = arrSearch(dwarfFNames);
 		nameObj.lName = arrSearch(dwarfLNames1) + arrSearch(dwarfLNames2);
 		nameDisplay();
-		}
+	});
 
-	function elfNameGen() {
+	$('#elfButton').click(function(){
 		nameObj.fName = arrSearch(elfFNames);
 		nameObj.lName = arrSearch(elfLNames);
 		nameDisplay();
+	});
+
+	$('#humanButton').click(function(){
+		if (Math.random() > 0.8) {
+			nameObj.fName = arrSearch(humanFNames) + " " + arrSearch(humanFNames)
 		}
 
-	function humanNameGen() {
-		nameObj.fName = arrSearch(humanFNames);
+		else {
+			nameObj.fName = arrSearch(humanFNames);
+		}
 		nameObj.lName = arrSearch(humanLNames);
 		nameDisplay();
-		}
-
-		// this to change with JQuery
-	function nameDisplay() {
-		document.getElementById("name").innerHTML = nameObj.fName + " " + nameObj.lName;
-		console.log(nameObj.fName + " " + nameObj.lName);
-		}
-
+	});
+});
