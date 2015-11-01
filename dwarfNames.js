@@ -1,5 +1,4 @@
 //Dwarf Names
-
 var dwarfFNames = [
 	"Thorin",
 	"Dorin",
@@ -121,4 +120,13 @@ var dwarfLNames2 = [
 	"snow",
 	"water",
 	"river",
+	];
+
+var dwarfCog = [
+	"The Pick of Grief",
+	"Ironsides",
+	"Metalfist",
+	"Lord of Misrule",
+	"Waraxe",
+	"The Brash",
 	];

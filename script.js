@@ -1,54 +1,54 @@
-	var nameObj = {
-		fName: "",
-		lName: "",
-	};
-/*
-	var race = prompt("Pick a race");
-	switch (race) {
-		case "Dwarf":
-		dwarfNameGen();
-		break;
+function pageLoad() {
+	$(document).ready(function() {
+		$('body').fadeIn(2000);
+	});
+}
+pageLoad();
 
-		case "Elf":
-		elfNameGen();
-		break;
+var nameObj = {
+	fName: "",
+	lName: "",
+};
 
-		case "Human":
-		humanNameGen();
-		break;
+function arrSearch(arrName) {
+	return arrName[Math.floor(Math.random() * arrName.length)];
+	}
 
-		default:
-		alert("That's not valid!");
-		break;
-		}
-*/
+function nameDisplay() {
+	console.log(nameObj.fName + " " + nameObj.lName);
+	$(document).ready(function(){
+		var name = (nameObj.fName + " " + nameObj.lName);
+		$("#name").fadeOut('slow', function(){
+			$("#name").html(name).fadeIn('fast');
+		});
+	});
+}
 
-	function arrSearch(arrName) {
-		return arrName[Math.floor(Math.random() * arrName.length)];
-	}	
-
-
-	function dwarfNameGen() {
+$(document).ready(function(){
+	$('#dwarfButton').click(function(){
 		nameObj.fName = arrSearch(dwarfFNames);
 		nameObj.lName = arrSearch(dwarfLNames1) + arrSearch(dwarfLNames2);
-		nameDisplay();
+		if (Math.random() > 0.9) {
+			nameObj.lName = nameObj.lName + " " + "'" + arrSearch(dwarfCog) + "'";
 		}
+		nameDisplay();
+	});
 
-	function elfNameGen() {
+	$('#elfButton').click(function(){
 		nameObj.fName = arrSearch(elfFNames);
 		nameObj.lName = arrSearch(elfLNames);
 		nameDisplay();
-		}
+	});
 
-	function humanNameGen() {
-		nameObj.fName = arrSearch(humanFNames);
+	$('#humanButton').click(function(){
+		if (Math.random() > 0.8) {
+			nameObj.fName = arrSearch(humanFNames) + " " + arrSearch(humanFNames);
+		}
+		else {
+			nameObj.fName = arrSearch(humanFNames);
+		}
 		nameObj.lName = arrSearch(humanLNames);
 		nameDisplay();
-		}
-
-		// this to change with JQuery
-	function nameDisplay() {
-		document.getElementById("name").innerHTML = nameObj.fName + " " + nameObj.lName;
-		console.log(nameObj.fName + " " + nameObj.lName);
-		}
+	});
+});
 
