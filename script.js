@@ -19,7 +19,7 @@ function nameDisplay() {
 	$(document).ready(function(){
 		var name = (nameObj.fName + " " + nameObj.lName);
 		$("#name").fadeOut('slow', function(){
-			$("#name").html(name).fadeIn('fast');
+			$("#name").html(name).fadeIn('slow');
 		});
 	});
 }
