@@ -1,8 +1,3 @@
-var nameObj = {
-	fName: "",
-	lName: "",
-};
-
 function pageLoad() {
 	$(document).ready(function() {
 		$('body').fadeIn(2000);
@@ -10,33 +5,24 @@ function pageLoad() {
 }
 pageLoad();
 
+var nameObj = {
+	fName: "",
+	lName: "",
+};
+
 function arrSearch(arrName) {
 	return arrName[Math.floor(Math.random() * arrName.length)];
-	}	
+	}
 
 function nameDisplay() {
 	console.log(nameObj.fName + " " + nameObj.lName);
 	$(document).ready(function(){
 		var name = (nameObj.fName + " " + nameObj.lName);
-  		$("#name").text(name).fadeIn("slow");
-  		
-// JQuery mouse over will hide generated name.
-	// Why can't I do this?
-	// When one function ENDS, start another one...
-/*			$("button").click(function() {
-  			$('#name').fadeOut("slow");
-
-  		});
-*/
-
+		$("#name").fadeOut('slow', function(){
+			$("#name").html(name).fadeIn('fast');
+		});
 	});
 }
-
-	function nameFade() {
-		$(document).ready(function(){
-
-		});
-	}
 
 $(document).ready(function(){
 	$('#dwarfButton').click(function(){
